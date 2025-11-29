@@ -1,0 +1,151 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to cyberpunk neon theme - dark navy with cyan and magenta */
+  --background: #0f1729;
+  --foreground: #e0f3ff;
+  --card: #1a2544;
+  --card-foreground: #e0f3ff;
+  --popover: #1a2544;
+  --popover-foreground: #e0f3ff;
+  --primary: #00d9ff;
+  --primary-foreground: #0f1729;
+  --secondary: #ff00ff;
+  --secondary-foreground: #0f1729;
+  --muted: #2d3e5f;
+  --muted-foreground: #7a8fa3;
+  --accent: #ff00ff;
+  --accent-foreground: #0f1729;
+  --destructive: #ff3366;
+  --destructive-foreground: #0f1729;
+  --border: #2d3e5f;
+  --input: #1a2544;
+  --ring: #00d9ff;
+  --chart-1: #00d9ff;
+  --chart-2: #ff00ff;
+  --chart-3: #00ff88;
+  --chart-4: #ff3366;
+  --chart-5: #ffd700;
+  --radius: 0.625rem;
+  --sidebar: #0d1425;
+  --sidebar-foreground: #e0f3ff;
+  --sidebar-primary: #00d9ff;
+  --sidebar-primary-foreground: #0f1729;
+  --sidebar-accent: #1a2544;
+  --sidebar-accent-foreground: #00d9ff;
+  --sidebar-border: #2d3e5f;
+  --sidebar-ring: #00d9ff;
+}
+
+.dark {
+  --background: #0f1729;
+  --foreground: #e0f3ff;
+  --card: #1a2544;
+  --card-foreground: #e0f3ff;
+  --popover: #1a2544;
+  --popover-foreground: #e0f3ff;
+  --primary: #00d9ff;
+  --primary-foreground: #0f1729;
+  --secondary: #ff00ff;
+  --secondary-foreground: #0f1729;
+  --muted: #2d3e5f;
+  --muted-foreground: #7a8fa3;
+  --accent: #ff00ff;
+  --accent-foreground: #0f1729;
+  --destructive: #ff3366;
+  --destructive-foreground: #0f1729;
+  --border: #2d3e5f;
+  --input: #1a2544;
+  --ring: #00d9ff;
+  --chart-1: #00d9ff;
+  --chart-2: #ff00ff;
+  --chart-3: #00ff88;
+  --chart-4: #ff3366;
+  --chart-5: #ffd700;
+  --sidebar: #0d1425;
+  --sidebar-foreground: #e0f3ff;
+  --sidebar-primary: #00d9ff;
+  --sidebar-primary-foreground: #0f1729;
+  --sidebar-accent: #1a2544;
+  --sidebar-accent-foreground: #00d9ff;
+  --sidebar-border: #2d3e5f;
+  --sidebar-ring: #00d9ff;
+}
+
+@theme inline {
+  --font-sans: "Geist", "Geist Fallback";
+  --font-mono: "Geist Mono", "Geist Mono Fallback";
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Add neon glow effects for cyberpunk aesthetic */
+@layer utilities {
+  .neon-glow {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+  }
+
+  .neon-glow-cyan {
+    text-shadow: 0 0 10px #00d9ff, 0 0 20px #00d9ff;
+  }
+
+  .neon-glow-magenta {
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff;
+  }
+
+  .neon-border-cyan {
+    border-color: #00d9ff;
+    box-shadow: 0 0 10px rgba(0, 217, 255, 0.3);
+  }
+
+  .neon-border-magenta {
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+  }
+}
